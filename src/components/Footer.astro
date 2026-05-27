@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
       <!-- Company info -->
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <img src="/images/logo.jpg" alt="McCuen Construction & Trucking logo" class="w-10 h-10 rounded" />
+          <img src={`${import.meta.env.BASE_URL}images/logo.jpg`} alt="McCuen Construction & Trucking logo" class="w-10 h-10 rounded" />
           <div>
             <div class="text-lg font-bold leading-tight">McCuen Construction</div>
             <div class="text-xs text-steel-light tracking-wider uppercase">& Trucking</div>
