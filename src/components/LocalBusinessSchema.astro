@@ -1,0 +1,87 @@
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "McCuen Construction & Trucking Inc",
+  "description": "Local Montana trucking company specializing in gravel hauling, excavation, site work, and construction material transport serving Billings and surrounding areas.",
+  "url": "https://www.mccuenconstructiontrucking.com",
+  "telephone": "+14069452426",
+  "email": "office@mccuenconstructiontrucking.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1212 Bench Blvd",
+    "addressLocality": "Billings",
+    "addressRegion": "MT",
+    "postalCode": "59105",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.7833,
+    "longitude": -108.5007
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Billings",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Montana"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Yellowstone County"
+    }
+  ],
+  "foundingDate": "2021",
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "07:00",
+    "closes": "17:00"
+  },
+  "sameAs": [],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Trucking & Construction Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gravel Hauling",
+          "description": "Large quantity gravel and aggregate hauling with side dump trucks"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Excavation & Site Work",
+          "description": "Excavation, grading, and site preparation for construction projects"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Material Transport",
+          "description": "Transport of building materials, machinery, and farm supplies"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "General Freight",
+          "description": "General freight hauling services across Montana and interstate"
+        }
+      }
+    ]
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

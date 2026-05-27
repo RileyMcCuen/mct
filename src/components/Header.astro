@@ -1,0 +1,111 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-navy text-cream shadow-lg sticky top-0 z-50">
+  <!-- Top bar with phone -->
+  <div class="bg-brand text-white text-sm font-semibold">
+    <div class="max-w-6xl mx-auto px-4 py-1.5 flex justify-between items-center">
+      <span>Billings, Montana &mdash; Serving Yellowstone County & Beyond</span>
+      <a href="tel:+14069452426" class="hover:text-cream transition-colors flex items-center gap-1.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        </svg>
+        (406) 945-2426
+      </a>
+    </div>
+  </div>
+
+  <!-- Main nav -->
+  <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3 group">
+      <img src="/images/logo.jpg" alt="McCuen Construction & Trucking logo" class="w-10 h-10 rounded" />
+      <div>
+        <div class="text-lg font-bold leading-tight group-hover:text-brand transition-colors">McCuen Construction</div>
+        <div class="text-xs text-steel-light tracking-wider uppercase">& Trucking</div>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden md:flex items-center gap-6">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[
+              'text-sm font-medium tracking-wide uppercase transition-colors hover:text-brand',
+              currentPath === href || (href !== '/' && currentPath.startsWith(href))
+                ? 'text-brand border-b-2 border-brand pb-1'
+                : 'text-cream',
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href="tel:+14069452426" class="hidden md:inline-flex items-center gap-2 bg-brand text-white px-4 py-2 rounded font-semibold text-sm hover:bg-brand-light transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+      </svg>
+      Call Now
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="md:hidden text-cream hover:text-brand transition-colors"
+      aria-label="Open navigation menu"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-navy-light border-t border-steel-dark">
+    <ul class="px-4 py-4 space-y-3">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class:list={[
+              'block text-sm font-medium tracking-wide uppercase transition-colors hover:text-brand py-1',
+              currentPath === href || (href !== '/' && currentPath.startsWith(href))
+                ? 'text-brand'
+                : 'text-cream',
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+      <li class="pt-2">
+        <a href="tel:+14069452426" class="inline-flex items-center gap-2 bg-brand text-white px-4 py-2 rounded font-semibold text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg>
+          (406) 945-2426
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

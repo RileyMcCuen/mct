@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const placeholders = [
+  'Side dump truck hauling gravel',
+  'Excavation work on a construction site',
+  'Fleet of trucks lined up',
+  'Dump truck on Montana highway',
+  'Site grading and preparation',
+  'Loading aggregate material',
+  'Multi-axle trailer setup',
+  'Completed project site',
+  'Equipment at work in Billings',
+];
+---
+
+<BaseLayout
+  title="Gallery | McCuen Construction & Trucking | Billings, MT"
+  description="See McCuen Construction & Trucking's fleet and project photos. Gravel hauling, excavation, and construction trucking in Billings, Montana."
+>
+  <!-- Page Header -->
+  <section class="bg-charcoal text-cream py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-brand uppercase tracking-widest text-sm font-semibold mb-2">Our Work</p>
+      <h1 class="text-4xl md:text-5xl font-bold">Gallery</h1>
+      <p class="text-steel-light mt-4 max-w-2xl text-lg">
+        A look at our trucks, equipment, and projects across the Billings area.
+      </p>
+    </div>
+  </section>
+
+  <!-- Photo Grid -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {placeholders.map((caption) => (
+          <div class="bg-steel/10 rounded-lg aspect-[4/3] flex items-center justify-center group hover:bg-steel/20 transition-colors">
+            <div class="text-center text-steel p-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 opacity-30 group-hover:opacity-50 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p class="text-sm italic">{caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-12">
+        <p class="text-steel-dark">
+          Want to see more of our work? Follow us or
+          <a href="/contact" class="text-brand font-semibold hover:text-brand-dark transition-colors">get in touch</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

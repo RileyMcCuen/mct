@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const services = [
+  {
+    title: 'Gravel Hauling',
+    description: 'We specialize in moving large quantities of gravel and aggregate with minimal loads using our side dump trucks. Whether you need material for a road project, a construction site, or land development, we haul it efficiently and on schedule.',
+    details: [
+      'Side dump and end dump hauling',
+      'Gravel, sand, rock, and aggregate',
+      'Large volume capacity with 11 axle setups',
+      'Residential and commercial projects',
+    ],
+    photoNote: 'Add photo: side dump truck hauling gravel',
+  },
+  {
+    title: 'Excavation & Site Work',
+    description: 'From breaking ground to final grading, our excavation services cover the full scope of site preparation. We handle projects of all sizes across the Billings area, bringing the right equipment and experience to get your site ready for construction.',
+    details: [
+      'Site clearing and preparation',
+      'Grading and leveling',
+      'Foundation excavation',
+      'Drainage and utility trenching',
+    ],
+    photoNote: 'Add photo: excavation equipment on a job site',
+  },
+  {
+    title: 'Material Transport',
+    description: 'Need building materials, heavy machinery, or farm supplies moved? We provide reliable transport for a wide range of construction and agricultural materials across Montana and interstate routes.',
+    details: [
+      'Building materials and supplies',
+      'Heavy machinery and equipment',
+      'Farm and agricultural supplies',
+      'Utility infrastructure materials',
+    ],
+    photoNote: 'Add photo: truck loaded with building materials',
+  },
+  {
+    title: 'General Freight',
+    description: 'As a DOT-certified and fully insured carrier, we handle general freight hauling with the reliability and professionalism your business demands. We operate both locally in Montana and across state lines.',
+    details: [
+      'DOT certified (USDOT #3684397)',
+      'Interstate and intrastate hauling',
+      'Fully insured — $1M coverage',
+      'Dependable scheduling and delivery',
+    ],
+    photoNote: 'Add photo: truck on Montana highway',
+  },
+];
+---
+
+<BaseLayout
+  title="Services | McCuen Construction & Trucking | Billings, MT"
+  description="Gravel hauling, excavation, site work, material transport, and general freight services in Billings, Montana. DOT certified, fully insured. Call (406) 945-2426."
+>
+  <!-- Page Header -->
+  <section class="bg-navy text-cream py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-brand uppercase tracking-widest text-sm font-semibold mb-2">What We Do</p>
+      <h1 class="text-4xl md:text-5xl font-bold">Our Services</h1>
+      <p class="text-steel-light mt-4 max-w-2xl text-lg">
+        Dependable trucking and construction services for the Billings, Montana area and beyond. From a single load to a full project, we've got you covered.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services List -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 space-y-16">
+      {services.map((service, index) => (
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class:list={[index % 2 === 1 && 'md:order-2']}>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">{service.title}</h2>
+            <p class="text-steel-dark leading-relaxed mb-6">{service.description}</p>
+            <ul class="space-y-2">
+              {service.details.map((detail) => (
+                <li class="flex items-start gap-2 text-sm text-steel-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <!-- Photo placeholder -->
+          <div class:list={['bg-steel/10 rounded-lg aspect-[4/3] flex items-center justify-center', index % 2 === 1 && 'md:order-1']}>
+            <div class="text-center text-steel p-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <p class="text-sm italic">{service.photoNote}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="py-12 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold mb-4">Service Area</h2>
+      <p class="text-steel-dark max-w-2xl mx-auto leading-relaxed">
+        We're based in Billings, Montana and primarily serve Yellowstone County and surrounding communities. As an interstate-certified carrier, we also handle jobs across Montana and beyond state lines when needed.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-navy text-cream">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Need a Quote?</h2>
+      <p class="text-steel-light mb-8">Tell us about your project and we'll give you a straight answer and a fair price.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+14069452426" class="inline-flex items-center justify-center gap-2 bg-brand text-white px-8 py-4 rounded font-bold text-lg hover:bg-brand-light transition-colors">
+          Call (406) 945-2426
+        </a>
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 border-2 border-cream text-cream px-8 py-4 rounded font-bold text-lg hover:bg-cream hover:text-navy transition-colors">
+          Send Us a Message
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

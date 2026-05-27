@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.mccuenconstructiontrucking.com)",
+      "WebSearch",
+      "WebFetch(domain:bubba.ai)",
+      "WebFetch(domain:www.carriersource.io)",
+      "Bash(npm create:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

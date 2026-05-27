@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us | McCuen Construction & Trucking | Billings, MT"
+  description="Contact McCuen Construction & Trucking for gravel hauling, excavation, and trucking services in Billings, Montana. Call (406) 945-2426 or send us a message."
+>
+  <!-- Page Header -->
+  <section class="bg-navy text-cream py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-brand uppercase tracking-widest text-sm font-semibold mb-2">Get In Touch</p>
+      <h1 class="text-4xl md:text-5xl font-bold">Contact Us</h1>
+      <p class="text-steel-light mt-4 max-w-2xl text-lg">
+        Have a project in mind? Need a quote? Give us a call or drop us a message &mdash; we'd love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-steel-dark mb-1">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-4 py-3 rounded border border-steel-light/30 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-steel-dark mb-1">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="w-full px-4 py-3 rounded border border-steel-light/30 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand"
+                placeholder="(406) 555-1234"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-steel-dark mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 rounded border border-steel-light/30 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div>
+              <label for="service" class="block text-sm font-medium text-steel-dark mb-1">Service Needed</label>
+              <select
+                id="service"
+                name="service"
+                class="w-full px-4 py-3 rounded border border-steel-light/30 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand"
+              >
+                <option value="">Select a service...</option>
+                <option value="gravel-hauling">Gravel Hauling</option>
+                <option value="excavation">Excavation & Site Work</option>
+                <option value="material-transport">Material Transport</option>
+                <option value="general-freight">General Freight</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-steel-dark mb-1">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-3 rounded border border-steel-light/30 bg-white text-navy focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand resize-vertical"
+                placeholder="Tell us about your project..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-brand text-white px-6 py-3 rounded font-bold text-lg hover:bg-brand-light transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
+          <p class="text-xs text-steel mt-3">
+            We typically respond within one business day. For urgent requests, please call us directly.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-2xl font-bold mb-6">Other Ways to Reach Us</h2>
+
+          <!-- Phone -->
+          <div class="mb-8">
+            <h3 class="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Phone</h3>
+            <a href="tel:+14069452426" class="text-2xl font-bold text-navy hover:text-brand transition-colors flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              (406) 945-2426
+            </a>
+            <p class="text-steel text-sm mt-1">Monday &ndash; Friday, 7:00 AM &ndash; 5:00 PM</p>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-8">
+            <h3 class="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Email</h3>
+            <a href="mailto:office@mccuenconstructiontrucking.com" class="text-lg font-medium text-navy hover:text-brand transition-colors flex items-center gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              office@mccuenconstructiontrucking.com
+            </a>
+          </div>
+
+          <!-- Address -->
+          <div class="mb-8">
+            <h3 class="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Address</h3>
+            <a href="https://maps.google.com/?q=1212+Bench+Blvd+Billings+MT+59105" target="_blank" rel="noopener" class="text-lg font-medium text-navy hover:text-brand transition-colors flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span>1212 Bench Blvd<br>Billings, MT 59105</span>
+            </a>
+          </div>
+
+          <!-- Map placeholder -->
+          <div class="bg-steel/10 rounded-lg aspect-[16/9] flex items-center justify-center">
+            <div class="text-center text-steel p-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              <p class="text-sm italic">Add Google Maps embed here</p>
+            </div>
+          </div>
+
+          <!-- Business info -->
+          <div class="mt-8 p-6 bg-cream-dark rounded-lg">
+            <h3 class="text-sm uppercase tracking-wider text-brand font-semibold mb-3">Business Information</h3>
+            <ul class="space-y-2 text-sm text-steel-dark">
+              <li><span class="font-medium">USDOT:</span> #3684397</li>
+              <li><span class="font-medium">MC Number:</span> #1282815</li>
+              <li><span class="font-medium">Insurance:</span> Fully insured &mdash; $1M coverage</li>
+              <li><span class="font-medium">Operating Authority:</span> Interstate carrier, authorized for hire</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
