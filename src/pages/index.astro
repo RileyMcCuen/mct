@@ -28,7 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </svg>
             (406) 945-2426
           </a>
-          <a href="/contact" class="inline-flex items-center justify-center gap-2 border-2 border-cream text-cream px-6 py-3 rounded font-bold text-lg hover:bg-cream hover:text-navy transition-colors">
+          <a href={`${import.meta.env.BASE_URL}/contact`} class="inline-flex items-center justify-center gap-2 border-2 border-cream text-cream px-6 py-3 rounded font-bold text-lg hover:bg-cream hover:text-navy transition-colors">
             Request a Quote
           </a>
         </div>
@@ -90,7 +90,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
       </div>
       <div class="text-center mt-10">
-        <a href="/services" class="inline-flex items-center gap-2 text-brand font-semibold hover:text-brand-dark transition-colors">
+        <a href={`${import.meta.env.BASE_URL}/services`} class="inline-flex items-center gap-2 text-brand font-semibold hover:text-brand-dark transition-colors">
           View All Services
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -113,7 +113,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="text-steel-dark leading-relaxed mb-6">
             We're a local, family-owned company that takes pride in dependable service. When you call us, you talk to real people who care about getting your job done on time and on budget.
           </p>
-          <a href="/about" class="inline-flex items-center gap-2 text-brand font-semibold hover:text-brand-dark transition-colors">
+          <a href={`${import.meta.env.BASE_URL}/about`} class="inline-flex items-center gap-2 text-brand font-semibold hover:text-brand-dark transition-colors">
             Learn More About Us
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -171,7 +171,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </svg>
           Call (406) 945-2426
         </a>
-        <a href="/contact" class="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy px-8 py-4 rounded font-bold text-lg hover:bg-navy hover:text-cream transition-colors">
+        <a href={`${import.meta.env.BASE_URL}/contact`} class="inline-flex items-center justify-center gap-2 border-2 border-navy text-navy px-8 py-4 rounded font-bold text-lg hover:bg-navy hover:text-cream transition-colors">
           Send Us a Message
         </a>
       </div>

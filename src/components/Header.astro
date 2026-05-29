@@ -1,10 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/contact', label: 'Contact' },
+  { href: `${base}/`, label: 'Home' },
+  { href: `${base}/services`, label: 'Services' },
+  { href: `${base}/about`, label: 'About' },
+  { href: `${base}/gallery`, label: 'Gallery' },
+  { href: `${base}/contact`, label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -26,7 +27,7 @@ const currentPath = Astro.url.pathname;
 
   <!-- Main nav -->
   <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-    <a href="/" class="flex items-center gap-3 group">
+    <a href={`${base}/`} class="flex items-center gap-3 group">
       <img src={`${import.meta.env.BASE_URL}/images/logo.jpg`} alt="McCuen Construction & Trucking logo" class="w-10 h-10 rounded" />
       <div>
         <div class="text-lg font-bold leading-tight group-hover:text-brand transition-colors">McCuen Construction</div>
